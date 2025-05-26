@@ -28,4 +28,9 @@ public class UserService {
         userRepository.save(createdUser);
     }
 
+    public User getUserById(Long id) {
+
+        return userRepository.findById(id).
+                orElseThrow(() -> new IllegalArgumentException("User not found"));
+    }
 }
