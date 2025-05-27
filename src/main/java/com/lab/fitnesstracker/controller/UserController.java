@@ -34,5 +34,13 @@ public class UserController {
         }
     }
 
-
+    @GetMapping("/me")
+    public ResponseEntity<User> getCurrentUser() {
+        try {
+            User user = userService.getCurrentUser();
+            return ResponseEntity.ok(user);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
