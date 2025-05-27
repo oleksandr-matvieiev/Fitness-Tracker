@@ -1,5 +1,6 @@
 package com.lab.fitnesstracker.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,6 +25,7 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Workout> workouts;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

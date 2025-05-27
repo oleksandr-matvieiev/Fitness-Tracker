@@ -1,5 +1,6 @@
 package com.lab.fitnesstracker.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,12 +25,13 @@ public class Workout {
 
     private LocalDate date;
 
-    private int durationMinutes;
+    private Integer durationMinutes;
 
-    private int caloriesBurned;
+    private Integer caloriesBurned;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonBackReference
     private User user;
 
 }
