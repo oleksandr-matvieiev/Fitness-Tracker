@@ -1,8 +1,6 @@
 package com.lab.fitnesstracker.controller;
 
 import com.lab.fitnesstracker.model.Goal;
-import com.lab.fitnesstracker.model.Workout;
-import com.lab.fitnesstracker.model.WorkoutType;
 import com.lab.fitnesstracker.service.GoalService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -25,8 +25,8 @@ public class UserService {
         }
 
         User createdUser = new User();
-        request.setUsername(request.getUsername());
-        request.setPassword(passwordEncoder.encode(request.getPassword()));
+        createdUser.setUsername(request.getUsername());
+        createdUser.setPassword(passwordEncoder.encode(request.getPassword()));
 
         userRepository.save(createdUser);
     }
