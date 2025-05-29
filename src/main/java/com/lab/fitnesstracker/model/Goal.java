@@ -21,15 +21,15 @@ public class Goal {
 
     private String description;
 
-    private int targetValue;
+    private Integer targetValue;
 
-    private int currentValue;
+    private Integer currentValue;
 
     private LocalDate startDate;
 
     private LocalDate endDate;
 
-    private boolean achieved;
+    private Boolean isAchieved;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
